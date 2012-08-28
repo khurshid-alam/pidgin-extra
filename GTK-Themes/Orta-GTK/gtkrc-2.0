@@ -1,0 +1,36 @@
+# Enable bind keystrokes to menu items
+gtk-can-change-accels = 1
+
+# Path to backgrounds
+pixmap_path "~/.purple"
+
+# roster style
+style "my-blist" {
+bg_pixmap[NORMAL] = "bg-themes/blist-gradient.png"
+text[NORMAL] = "#5A5A5A"
+text[SELECTED] = "#000000"
+bg[NORMAL] = "#bdbdbd"
+bg[SELECTED] = "#cccccc"
+base[NORMAL] = "#EFEFF0"
+base[SELECTED] = "#cccccc"
+}
+
+# chat window styles
+style "my-chat" {
+text[NORMAL] = "#5A5A5A"
+base[NORMAL] = "#EFEFF0"
+font_name = "Ubuntu 8"
+GtkTreeView::odd_row_color = ""
+GtkTreeView::even_row_color = ""
+}
+
+# Activate styles
+# tree views (strong sequence)
+widget_class "*TreeView" style "my-chat"
+widget "*pidgin_blist_treeview" style "my-blist"
+# chat window and others
+widget "*pidgin_conv_entry" style "my-chat"
+widget "*pidgin_conv_imhtml" style "my-chat"
+widget "*pidgin_notify_imhtml" style "my-chat"
+widget "*pidgin_request_imhtml" style "my-chat"
+widget "*pidgin_log_imhtml" style "my-chat"
