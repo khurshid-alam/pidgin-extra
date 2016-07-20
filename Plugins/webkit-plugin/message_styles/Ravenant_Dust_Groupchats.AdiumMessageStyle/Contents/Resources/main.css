@@ -1,0 +1,238 @@
+/*Dark Adium theme V0.1b by Pritthish Chakraborty  http://twitter.com/pritthish
+Ported from Light v1.7 for Bluebird by NaWong  http://nadesign.net
+
+Based on Ravenant theme http://www.adiumxtras.com/index.php?a=xtras&xtra_id=6766 and Ubuntu Dust theme for GTK+.
+Created by Krzysztof Klinikowski <kkszysiu@gmail.com> http://grom.jabbim.pl/
+*/
+
+/*Global Reset*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	font-family: 'DroidSans';
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:13px;
+	font-family:inherit;
+	vertical-align:baseline;
+}
+
+:focus{
+	outline:0;
+}
+
+body{
+	font-family: 'DroidSans';
+    font-size: 13px;
+	background-color: #E3DFD8;
+	margin: 0;
+	padding: 0;
+	
+}
+
+@font-face{
+font-family: 'DroidSans';
+font-size: 13px; 
+src: url('DroidSans.ttf') format('truetype');
+}
+
+a:link, a:visited {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/*Misc Stuff*/
+
+.message{
+	position:relative;
+	margin:0;
+	padding:0;
+}
+
+.message.fade{
+	opacity:.50;
+}
+
+.message .wrapper{
+	padding:1px 0;
+}
+
+.message .inner{
+	position:relative;
+	margin:.6em 0 .6em;
+	padding:.01em 0px .01em;
+}
+
+.message .text,
+.status .text{
+	margin:0 50px 0 6px;
+	padding:0;
+	border:0;
+
+}
+
+.message .time,
+.status .time{
+	width:62px;
+	margin:0;
+	padding:0 0 0 4px;
+	position:absolute;
+	top:0em;
+	right:-30px;
+	background:transparent;
+}
+.clear{
+	float:none;
+	clear:both;
+	width:0;
+	background:transparent;
+}
+
+.sender {
+	font-weight: bold;
+	text-shadow:0px 1px 0px #fff;
+
+}
+
+
+/*Status Messages*/
+
+div.status{
+	position:relative;
+	margin-bottom: 12px;
+	margin-top: 6px;
+	margin-left: 12px;
+	margin-right: 12px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	z-index:200;
+	border: none;
+	background: url(img/status.png) 0 0 repeat-x;	color:#fff;
+	font-size:11px;
+	font-weight: bold;
+	font-family: 'DroidSans';
+	-webkit-border-radius: 6px;
+	-webkit-box-shadow: 0px 1px 3px #111111;
+	/*text-shadow: 0px 1px 0px #3671ad;*/
+}
+.statua a:link, .status a:visite, .status a:hover {
+	color: #fff;
+	text-shadow: none;
+}
+.status h2{
+	color:#e7e7e7;
+}
+
+.status .time{
+	top: 4px;
+	right: -10px;
+	padding-right: 0;
+	color:#fafafa;
+}
+
+.avatar {
+	width: 32px;
+	height: 32px;
+	margin-left: 12px;
+	margin-top: 1px;
+	float: left;
+	-webkit-box-reflect:below 0px url('mask_reflection.png');
+}
+
+
+.avatar img {
+	width: 32px;
+	border-style: none;
+	-webkit-mask-image:url('mask_avatar.png');
+	z-index:300;
+}
+
+
+.avatar2 {
+	width: 32px;
+	height: 32px;
+	margin-right: 12px;
+	margin-top: 1px;
+	float: right;
+	-webkit-box-reflect:below 0px url('mask_reflection.png');
+}
+
+
+.avatar2 img {
+	width: 32px;
+	border-style: none;
+	-webkit-mask-image:url('mask_avatar.png');
+	z-index:300;
+}
+
+.nick {
+	color:#FFFFFF;
+	text-shadow: 0px 1px 0px #484848;
+}
+
+/*Incoming Messages*/
+.in{
+	z-index:300;
+	color:#000000;
+	margin: 12px 12px 12px 54px;
+	padding: 8px 12px;
+	-webkit-border-radius: 6px;
+	-webkit-box-shadow: 0px 1px 3px #111111;
+	border-top: 1px solid #6D6861;
+	min-height: 22px;
+	text-shadow: rgba(0,0,0,0.3) 0 -1px 0;
+	background: -webkit-gradient(linear, left top, left bottom, from(#BBB3A7), color-stop(0.8,#AAA194));
+	position:relative;
+	-webkit-transition-duration: 0.5s;
+}
+
+
+.in .time{
+	color:#FFFFFF;
+	text-shadow: 0px 1px 0px #484848;
+	font: 0.6em;
+	right: -10px;
+}
+
+
+/* Outgoing Messages*/
+.out{
+
+	z-index:100;
+	color:#000000;
+	margin: 12px 54px 12px 12px;
+	padding: 8px 12px;
+	-webkit-border-radius: 6px;
+	-webkit-box-shadow: 0px 1px 3px #111111;
+	border-top: 1px solid #A0978A;
+	min-height: 22px;
+	text-shadow: rgba(0,0,0,0.3) 0 -1px 0;
+	background: -webkit-gradient(linear, left top, left bottom, from(#BBB3A7), color-stop(0.8,#AAA194));
+	-webkit-transition-duration: 0.5s;
+	position:relative;
+}
+
+
+.out .time{
+	color:#FFFFFF;
+	text-shadow: 0px 1px 0px #484848;
+	font: 0.6em;
+	right: -10px;
+}
